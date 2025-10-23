@@ -20,8 +20,6 @@ header{
 }
 
 
-
-
 :root {
     --x-width: calc(var(--ham-height)* 1.41421356237);
 
@@ -104,6 +102,28 @@ header{
 
 .ham-menu:has(input:checked) + .sidebar{
     translate: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav li {
+    display: flex;
+    flex-direction: column;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+nav li a:hover {
+    color:var(--foreground);
 }
 
 
