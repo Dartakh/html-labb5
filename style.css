@@ -1,24 +1,5 @@
-.root {
-    --color-primary: #6c5ce7;
-    --color-secundary: #34495E;
-    --color-third: #fff;
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --font-style: normal;
-    --font-size: 16px;
-    --breakpoint-mobile: 480px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1200px;
-    --bar-width: 60px;
-    --bar-height: 8px;
-    --hamburgare-gap: 6px;
-    --foreground: #550874;
-    --background: #ad19f1; 
-    --animation-timing: 200ms ease-in-out;
-    --ham-height: calc(60px * 3 + 10px * 2);
-}
-
-* ::after,
-::before{
+*, *::after,
+*::before{
     box-sizing: border-box;
 }
 
@@ -30,62 +11,93 @@ body{
     color: #6c5ce7;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    margin: 0;
+header{
+    display: flex;
+    justify-content: space-between;
 }
 
-/*
-.ham-menu {
-    --x-width: calc(60px*3 + 10px*2) * 1.4142135623;
 
+:root {
+    --x-width: calc(var(--ham-height)* 1.41421356237);
+
+    --bar-width: 30px; 
+    --bar-height: 2px;
+    --hamburgare-gap: 6px;
+    --foreground: #6C5CE7;
+    --background: #34495E;
+    --ham-margin: 10px;
+    --animation-timing: 500ms ease-in-out;
+    --ham-height: calc(var(--bar-height)*3 + var(--hamburgare-gap)*2);
+
+}
+
+.ham-menu{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--hamburgare-gap);
     width: max-content;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+    position:absolute;
+    top: var(--ham-margin);
+    left: var(--ham-margin);
     z-index: 2;
     cursor: pointer;
 }
+
 
 .ham-menu::before,
 .ham-menu::after,
 .ham-menu input{
     content: "";
-    width: 60px;
-    height: 10px;
-    background-color: #34495E;
-    border-radius: 99999px;
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 999999px;
+    transition: opacity var(--animation-timing) width var(--animation-timing)
+    rotate var(--animation-timing) translate var(--animation-timing) background-color var(--animation-timing);
     transform-origin: left center;
 }
 
-.ham-menu input {
+.ham-menu input{
     appearance: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     outline: none;
     pointer-events: none;
-
 }
 
 .ham-menu:has(input:checked)::before{
     rotate: 45deg;
     width: var(--x-width);
-    translate: 0 calc(60px / -2);
+    translate: 0 calc(var(--bar-height) / -2);
 }
 
 .ham-menu:has(input:checked)::after{
     rotate: -45deg;
     width: var(--x-width);
-    translate: 0 calc(60px / 2);
+    translate: 0 calc(var(--bar-height) / 2);
 }
+
 
 .ham-menu input:checked{
     opacity: 0;
     width: 0;
-} */
+}
+
+.sidebar {
+    /*translate: -100%;*/
+    transition: translate var(--animation-timing);
+    translate: 100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--ham-height) + var(--ham-margin) + 1rem);
+    background-color: var(--background);
+    color: white;
+    max-width: 10 rem;
+    min-height: 10vh;
+}
+
+.ham-menu:has(input:checked) + .sidebar{
+    translate: 0;
+}
+
 
 
