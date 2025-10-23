@@ -13,8 +13,13 @@ body{
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0;
 }
+
+
 
 
 :root {
@@ -36,13 +41,12 @@ header{
     flex-direction: column;
     gap: var(--hamburgare-gap);
     width: max-content;
-    position:absolute;
+    position: fixed;
     top: var(--ham-margin);
     left: var(--ham-margin);
     z-index: 2;
     cursor: pointer;
 }
-
 
 .ham-menu::before,
 .ham-menu::after,
@@ -84,15 +88,18 @@ header{
 }
 
 .sidebar {
-    /*translate: -100%;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 200px;
+    translate: -100%;
     transition: translate var(--animation-timing);
-    translate: 100%;
     padding: 0.5rem 1rem;
     padding-top: calc(var(--ham-height) + var(--ham-margin) + 1rem);
     background-color: var(--background);
     color: white;
-    max-width: 10 rem;
-    min-height: 10vh;
+    z-index: 1;
 }
 
 .ham-menu:has(input:checked) + .sidebar{
