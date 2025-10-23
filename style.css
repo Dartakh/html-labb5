@@ -128,7 +128,7 @@ nav li a:hover {
 
 h1{
     background-color: #F0F0F0;
-    font-size: 40px;
+    font-size: 34px;
     width: 400px;
     border-radius: 10px;
     text-align: center;
@@ -138,6 +138,7 @@ h1{
 .main-paragraph {
     margin: 0 auto;
     color: #2b2b2b;
+    width: auto;
 }
 
 .contact-button {
@@ -154,8 +155,10 @@ h1{
 }
 
 .second-paragraph{
+    width: 400px;
     text-align: center;
     font-size: 14px;
+    margin: 0 auto;
 }
 
 h2{
@@ -174,13 +177,22 @@ h2{
     align-items: center;
 }
 
-.client img{
-    display: inline-block;
-    padding: 20px;
-    width: 120px;
-    height: 80px;
+.clients img{
+    padding: 10px;
+    width: 120px !important;
+    height: 80px !important;
     object-fit: contain;
+    padding: 0;
+    margin: 0 auto;
 }
 
+.why-choose-us li{
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+}
 
+.why-choose-us img {
+    margin: 0;
 
+}
