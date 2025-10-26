@@ -4,7 +4,7 @@
 }
 
 body{
-    margin: 0;  
+    margin: 0;
 }
 
 .purple-text{
@@ -22,7 +22,6 @@ header{
 
 :root {
     --x-width: calc(var(--ham-height)* 1.41421356237);
-
     --bar-width: 30px; 
     --bar-height: 2px;
     --hamburgare-gap: 6px;
@@ -31,7 +30,7 @@ header{
     --ham-margin: 10px;
     --animation-timing: 500ms ease-in-out;
     --ham-height: calc(var(--bar-height)*3 + var(--hamburgare-gap)*2);
-
+    --max-width-mobile: 800px;
 }
 
 .ham-menu{
@@ -126,19 +125,27 @@ nav li a:hover {
     color:var(--foreground);
 }
 
+.hero-content{
+    padding-left: 10px;
+}
+
 h1{
     background-color: #F0F0F0;
     font-size: 34px;
-    width: 400px;
+    max-width: var(--max-width-mobile);
     border-radius: 10px;
     text-align: center;
-    margin: 0 auto; 
+    margin: 10px auto; 
+    padding: 5px;
+    
 }
 
 .main-paragraph {
     margin: 0 auto;
     color: #2b2b2b;
     width: auto;
+    padding-left: 10px;
+    font-size: auto;
 }
 
 .contact-button {
@@ -186,13 +193,69 @@ h2{
     margin: 0 auto;
 }
 
+.why-choose-us{
+    max-width: var(--max-width-mobile);
+    margin: 0;
+    text-align: left;
+    padding: 20px;
+}
+
 .why-choose-us li{
     list-style-type: none;
-    padding: 0;
-    font-size: 16px;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
+
+.why-choose-us ul{
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .why-choose-us img {
     margin: 0;
+}
 
+.selling-text-talentura-worldclass{
+    text-align: center;
+    background-color: #F0F0F0;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.blogs{
+    display: grid;
+    gap: 40px;
+    max-width: fit-content;
+    margin-left: 10px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 16px;
+}
+
+.blog-post h3{
+    grid-column: 1 / -1;
+    margin: 0 0 8px;
+}
+
+.blog-post .blog-text {
+    grid-column: 1;
+}
+
+.blog-post img {
+    grid-column: 2;
+    width: 100%;
+    height: auto;
+    display: block;
 }
