@@ -258,4 +258,38 @@ h2{
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 5px;
+}
+
+.blog-text img {
+    width: 100%;
+    height: auto;
+}
+
+
+footer {
+    background-color: #6C5CE7;
+    display: grid;
+    place-items: center;
+    padding: 20px;}
+
+footer .footer-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-link:hover{
+    text-decoration: solid, underline;
+    color: black;
 }
