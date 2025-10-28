@@ -345,3 +345,37 @@ footer .footer-nav ul{
 
 
 /* Our Services CSS */
+
+.our-services{
+    max-width: var(--max-width-mobile);
+    margin: 0;
+    text-align: left;
+    padding: 20px;
+}
+
+.our-services img {
+    margin: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.our-services .h2-services{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.our-services .h3-services{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.media-services{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text-services{
+    margin-bottom: 30px;
+} 
