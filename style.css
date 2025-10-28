@@ -32,7 +32,7 @@ header{
     --ham-height: calc(var(--bar-height)*3 + var(--hamburgare-gap)*2);
     --max-width-mobile: 800px;
 }
-
+/* Hamburger menu CSS */
 .ham-menu{
     display: flex;
     flex-direction: column;
@@ -124,7 +124,7 @@ nav li a {
 nav li a:hover {
     color:var(--foreground);
 }
-
+/* Hero section CSS */
 .hero-content{
     padding-left: 10px;
 }
@@ -176,6 +176,8 @@ h2{
     padding-bottom: 15px;
 }
 
+/* Clients section CSS */
+
 .clients{
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +195,8 @@ h2{
     margin: 0 auto;
 }
 
+
+/* Why choose us section CSS */
 .why-choose-us{
     max-width: var(--max-width-mobile);
     margin: 0;
@@ -228,6 +232,7 @@ h2{
     margin-bottom: 10px;
 }
 
+/* Blog i startsidan - CSS */
 .blogs{
     display: grid;
     gap: 40px;
@@ -266,7 +271,7 @@ h2{
     height: auto;
 }
 
-
+/* Footer CSS */
 footer {
     background-color: #6C5CE7;
     display: grid;
@@ -293,3 +298,50 @@ footer .footer-nav ul{
     text-decoration: solid, underline;
     color: black;
 }
+
+
+/*client-cases CSS */ 
+
+.client-cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    gap: 40px;
+    max-width: fit-content;
+    margin-left: 10px;
+    margin: 0 auto;
+    grid-auto-flow: row dense;
+}
+
+.client-cases > h3{
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.client-cases img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.blog-textleft {
+    grid-column: 1;
+    text-align: left;
+}
+
+.blog-textright {
+    grid-column: 2;
+    text-align: left;
+}
+
+.media-left {
+    grid-column: 2;
+}
+
+.media-right {
+    grid-column: 1;
+}
+
+
+/* Our Services CSS */
