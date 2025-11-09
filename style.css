@@ -456,13 +456,15 @@ footer .footer-nav ul{
 
     .main-paragraph{
         visibility: hidden;
+        display: none
     }
 
     .second-paragraph-a{
         display: block;
         width: 600px;
         font-size: 18px;
-        padding: 10px 10px 10px 0px;
+        padding: 10px 10px 10px 10px;
+        margin: 0 auto;
         background-color: #F0F0F0;
     }
 
@@ -490,10 +492,12 @@ footer .footer-nav ul{
     
     .third-h2{
         visibility: hidden;
+        display: none
     }
 
     .blogs{
        visibility: hidden;
+       display: none;
     }
 
     /* landingpage for desktop-skärmar */
